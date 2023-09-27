@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "7375b966-3c2d-40d3-bb64-997b3965aa1f",
+		"name": "Air Cleaning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3483688"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"shailesh@gmail.com\",\r\n    \"password\": \"Shailesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logged In User Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/user-details",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Shailesh Jakhaniya\",\r\n    \"email\": \"shailesh@gmail.com\",\r\n    \"password\": \"Shailesh@123\",\r\n    \"confirm_password\": \"Shailesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Air Ducts Lists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/air-ducts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"air-ducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dryer Vents Lists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/dryer-vents",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dryer-vents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Air Ducts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"num_of_furnace\": 2,\r\n    \"furnace_loc_sidebyside\": 3001,\r\n    \"furnace_loc_different\": 4200,\r\n    \"square_footage_min\": 5,\r\n    \"square_footage_max\": 10,\r\n    \"final_price\": 1900\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/air-ducts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"air-ducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Dryer Vent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dryer_vent_exit_point\": \"Rooftop\",\r\n    \"price\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/dryer-vents",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dryer-vents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Air Ducts",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"num_of_furnace\": 1,\r\n    \"furnace_loc_sidebyside\": 2011,\r\n    \"furnace_loc_different\": 3201,\r\n    \"square_footage_min\": 1,\r\n    \"square_footage_max\": 5,\r\n    \"final_price\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/air-ducts/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"air-ducts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Dryer Vent",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dryer_vent_exit_point\": \"Rooftop\",\r\n    \"price\": 1600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/dryer-vents/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dryer-vents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Air Ducts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/air-ducts/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"air-ducts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Dryer Vent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/dryer-vents/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dryer-vents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Air Ducts",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/air-ducts/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"air-ducts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Dryer Vent",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/dryer-vents/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"dryer-vents",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business Rules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/business-rules",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"business-rules"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
