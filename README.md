@@ -47,10 +47,6 @@ Then generate application key
 
     php artisan key:generate
 
-Then create passport authenication install
-
-    php artisan passport:install
-
 #### Update configuration File
 
 we need to add set configuration on env file and database configuration file. you you need to set env file with check database configuration.
@@ -70,6 +66,10 @@ Then run the migrations
 
     php artisan migrate
 
+Then passport install
+
+    php artisan passport:install
+
 Now you can run project
 
 Start the local development server
@@ -77,5 +77,7 @@ Start the local development server
     php artisan serve
 
 	You can now access the server at http://localhost:8000
+
+Or I have added the POSTMAN collection of the API in root path.
 
 Or You can create virtual host and execute the project in your local system.
