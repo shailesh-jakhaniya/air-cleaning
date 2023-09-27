@@ -8,7 +8,7 @@ The following are required to function properly.
 *   PHP Version: 8.0.2
 *   Composer Version: 2.0
 
-## About Dasra Project
+## About Air Cleaning Project
 
 This project is about Air Cleaning.
 
@@ -21,7 +21,7 @@ We have created the API for the air cleaning in this project.
 
 You can create new Air cleaning project using git clone
 
-	git clone "repo url"
+	git clone "https://github.com/shailesh-jakhaniya/air-cleaning"
 
 After the project is created run the following commands
 
