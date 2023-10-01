@@ -7,6 +7,7 @@ The following are required to function properly.
 *   Laravel Version: ^9.19
 *   PHP Version: 8.0.2
 *   Composer Version: 2.0
+*   Node Version: 9.4.0
 
 ## About Air Cleaning Project
 
@@ -38,6 +39,12 @@ Assuming you've already installed composer on your machine: 2.4.4, [Composer](ht
 Install the dependencies using composer
 
 	composer install
+
+Install the dependencies using npm
+
+	npm install
+
+    npm run dev
 
 Copy the environment from .env.example to .env and add database connection
 
