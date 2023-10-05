@@ -13,7 +13,11 @@ class ScheduleOnline extends Component
     public $title = 'Schedule Online';
     public $formData;
     public $dryerVents;
-    public $numberOfFurance;
+    public $numberOfFurance = [
+        '1' => '1',
+        '2' => '2',
+        '3' => '3+'
+    ];
     public $yes_no = [
         'yes' => 'Yes',
         'no' => 'No'
@@ -34,7 +38,7 @@ class ScheduleOnline extends Component
     public function mount()
     {
         $this->dryerVents = DryerVents::get()->pluck('dryer_vent_exit_point','dryer_vent_exit_point')->toArray();
-        $this->numberOfFurance = AirDucts::get()->pluck('num_of_furnace','num_of_furnace')->toArray();
+        // $this->numberOfFurance = AirDucts::get()->pluck('num_of_furnace','num_of_furnace')->toArray();
     }
 
     public function updatedFormDataSqFootage($value)
